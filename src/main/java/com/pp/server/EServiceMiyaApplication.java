@@ -69,14 +69,12 @@ public class EServiceMiyaApplication {
 		private CountDownLatch doneSingle;
 		
 		public Worker(CountDownLatch startSingle, CountDownLatch doneSingle) {
-			// TODO Auto-generated constructor stub
 			this.startSingle = startSingle;
 			this.doneSingle = doneSingle;
 		}
 		
 		@Override
 		public void run() {
-			// TODO Auto-generated method stub
 			try {
 				System.out.println("Thread start -----");
 				startSingle.await();
